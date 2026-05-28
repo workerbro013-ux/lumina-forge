@@ -83,8 +83,7 @@ export function Hero() {
         >
           <div>
             <p className="text-base text-muted-foreground md:text-lg">
-              BCA Student &amp; Aspiring Software Developer crafting modern, performant interfaces
-              with motion and meaning.
+              A BCA student who loves software creation and isn't afraid to start from zero.
             </p>
             <div className="mt-6 flex items-center gap-3">
               <Sparkles className="h-4 w-4 text-foreground/60" />
