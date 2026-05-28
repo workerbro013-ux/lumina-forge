@@ -56,9 +56,6 @@ export function Skills() {
                 <div className="flex-1">
                   <div className="flex items-baseline justify-between gap-2">
                     <h3 className="font-display text-lg font-semibold">{s.name}</h3>
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                      {s.level}%
-                    </span>
                   </div>
                   <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-secondary">
                     <motion.div
