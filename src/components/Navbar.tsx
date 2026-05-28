@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -12,6 +13,7 @@ const links = [
 ];
 
 export function Navbar() {
+  const { theme, toggle } = useTheme();
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -95,6 +97,13 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={toggle}
+            aria-label="Toggle theme"
+            className="grid h-9 w-9 place-items-center rounded-full border border-border/60 text-foreground transition-colors hover:bg-secondary"
+          >
+            {theme === "dark" ? <Sun className="h-3.5 w-3.5" /> : <Moon className="h-3.5 w-3.5" />}
+          </button>
           <a
             href="#contact"
             className="hidden rounded-full border border-border/60 px-4 py-1.5 text-[10px] uppercase tracking-[0.25em] text-foreground transition-colors hover:bg-secondary md:inline-block"
