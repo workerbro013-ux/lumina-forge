@@ -31,10 +31,10 @@ export function Loader() {
           <div className="absolute inset-0 noise opacity-60" />
           <div className="relative flex flex-col items-center gap-8">
             <motion.h1
-              initial={{ opacity: 0, letterSpacing: "0.4em" }}
-              animate={{ opacity: 1, letterSpacing: "0.6em" }}
+              initial={{ opacity: 0, letterSpacing: "0.15em" }}
+              animate={{ opacity: 1, letterSpacing: "0.2em" }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="font-display text-3xl font-semibold tracking-[0.6em] text-foreground md:text-5xl"
+              className="font-display text-base font-medium tracking-[0.2em] text-foreground md:text-lg"
             >
               PUSKAR
             </motion.h1>

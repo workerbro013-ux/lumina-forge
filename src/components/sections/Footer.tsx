@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, MessageCircle, Facebook, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Facebook, Instagram, Mail, Phone, ArrowUpRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const socials = [
-  { Icon: Github, href: "#", label: "GitHub" },
-  { Icon: Linkedin, href: "#", label: "LinkedIn" },
-  { Icon: MessageCircle, href: "#", label: "Chat" },
-  { Icon: Facebook, href: "#", label: "Facebook" },
-  { Icon: Instagram, href: "#", label: "Instagram" },
-  { Icon: Mail, href: "mailto:hello@puskar.dev", label: "Email" },
+  { Icon: Github, href: "https://github.com/puskar29", label: "GitHub" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/in/puskar-thapa-magar-0a5b09365/", label: "LinkedIn" },
+  { Icon: FaWhatsapp, href: "https://wa.me/9779766479723", label: "WhatsApp" },
+  { Icon: Facebook, href: "https://www.facebook.com/puskar.magar.453520/", label: "Facebook" },
+  { Icon: Instagram, href: "https://www.instagram.com/puskar_magar02/", label: "Instagram" },
+  { Icon: Mail, href: "mailto:puskarmagar0215@gmail.com", label: "Email" },
+  { Icon: Phone, href: "tel:+9779766479723", label: "Phone" },
 ];
 
 export function Footer() {
@@ -139,7 +141,7 @@ export function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-6 text-[11px] text-muted-foreground"
             >
-              hello@puskar.dev
+              puskarmagar0215@gmail.com · Kathmandu, Nepal
             </motion.p>
           </div>
         </div>
@@ -162,11 +164,6 @@ export function Footer() {
         {/* Bottom meta */}
         <div className="mt-5 flex flex-col items-center justify-between gap-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground md:flex-row">
           <span>© {new Date().getFullYear()} Puskar Thapa Magar</span>
-          <span className="flex items-center gap-2 text-center">
-            Crafted in Kathmandu
-            <span className="h-1 w-1 rounded-full bg-foreground/40" />
-            Built with React &amp; Motion
-          </span>
           <span className="flex items-center gap-2">
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
