@@ -28,9 +28,9 @@ export function About() {
           transition={{ duration: 0.7 }}
           className="font-display text-3xl font-semibold leading-tight tracking-tight md:col-span-7 md:text-5xl"
         >
-          A <span className="gradient-text">TU BCA</span> student turning curiosity into
-          interfaces — passionate about Java, frontend craft and building modern, expressive
-          web experiences.
+          A <span className="gradient-text">TU BCA</span> student who turns curiosity into
+          working projects. Learning Java, exploring frontend, and building real things —
+          not waiting for permission.
         </motion.h2>
 
         <motion.div
@@ -38,15 +38,20 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="space-y-4 text-muted-foreground md:col-span-5"
+          className="space-y-4 md:col-span-5"
         >
-          <p>
-            I'm Puskar — currently in my 4th semester of BCA at Tribhuvan University. My focus
-            sits at the intersection of clean architecture and delightful design.
+          <p className="font-display text-sm uppercase tracking-[0.35em] text-foreground/80">
+            Projects &gt; Promises
           </p>
-          <p>
-            I'm always learning, building and shipping. From small experiments to full apps,
-            every project is an opportunity to sharpen craft.
+          <p className="text-xs leading-relaxed text-muted-foreground">
+            I'm Puskar — 4th semester BCA student at Tribhuvan University. I don't know
+            everything, and that's exactly why I build. Every project teaches me something
+            Java couldn't, and every design mistake makes my next interface better.
+          </p>
+          <p className="text-xs leading-relaxed text-muted-foreground">
+            I sit somewhere between clean architecture and delightful design — learning
+            backend logic while crafting frontend experiences. From small experiments to
+            full apps, I'm not waiting to be an expert. I'm becoming one, one ship at a time.
           </p>
         </motion.div>
       </div>
