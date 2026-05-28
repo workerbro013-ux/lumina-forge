@@ -97,6 +97,13 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={toggle}
+            aria-label="Toggle theme"
+            className="grid h-9 w-9 place-items-center rounded-full border border-border/60 text-foreground transition-colors hover:bg-secondary"
+          >
+            {theme === "dark" ? <Sun className="h-3.5 w-3.5" /> : <Moon className="h-3.5 w-3.5" />}
+          </button>
           <a
             href="#contact"
             className="hidden rounded-full border border-border/60 px-4 py-1.5 text-[10px] uppercase tracking-[0.25em] text-foreground transition-colors hover:bg-secondary md:inline-block"
