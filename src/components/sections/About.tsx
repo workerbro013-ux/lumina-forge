@@ -45,13 +45,16 @@ export function About() {
           </p>
           <p className="text-xs leading-relaxed text-muted-foreground">
             I'm Puskar — 4th semester BCA student at Tribhuvan University. I don't know
-            everything, and that's exactly why I build. Every project teaches me something
-            Java couldn't, and every design mistake makes my next interface better.
+            everything, and that's exactly why I build. Every project teaches me something.
+            Every mistake makes me sharper. I'm not trying to look like a developer today —
+            I'm trying to become one for a lifetime.
           </p>
           <p className="text-xs leading-relaxed text-muted-foreground">
-            I sit somewhere between clean architecture and delightful design — learning
-            backend logic while crafting frontend experiences. From small experiments to
-            full apps, I'm not waiting to be an expert. I'm becoming one, one ship at a time.
+            I believe success doesn't come from knowing everything upfront. It comes from
+            showing up, staying curious, and putting in the work now so later means
+            something. I'm learning quietly, building honestly, and growing every single
+            day. Not fast. But steady. And one day, all this learning will turn into
+            something meaningful.
           </p>
         </motion.div>
       </div>
