@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 
 const links = [
