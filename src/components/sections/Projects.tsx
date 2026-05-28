@@ -108,6 +108,8 @@ function ProjectCard({ p }: { p: Project }) {
           {p.github && (
             <a
               href={p.github}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Source"
               className="grid h-8 w-8 place-items-center rounded-full border border-border/60 text-muted-foreground transition-all hover:border-foreground/40 hover:text-foreground"
             >
@@ -116,6 +118,8 @@ function ProjectCard({ p }: { p: Project }) {
           )}
           <a
             href={p.href ?? "#"}
+            target={p.href ? "_blank" : undefined}
+            rel={p.href ? "noopener noreferrer" : undefined}
             aria-label="Open"
             className="grid h-8 w-8 place-items-center rounded-full border border-border/60 text-muted-foreground transition-all group-hover:border-foreground/60 group-hover:text-foreground"
           >
