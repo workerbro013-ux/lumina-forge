@@ -4,14 +4,14 @@ import {
 } from "react-icons/si";
 
 const skills = [
-  { name: "HTML", icon: SiHtml5, level: 75, tag: "Intermediate", color: "#E34F26" },
-  { name: "CSS", icon: SiCss, level: 72, tag: "Intermediate", color: "#1572B6" },
+  { name: "HTML", icon: SiHtml5, level: 70, tag: "Intermediate", color: "#E34F26" },
+  { name: "CSS", icon: SiCss, level: 70, tag: "Intermediate", color: "#1572B6" },
   { name: "JavaScript", icon: SiJavascript, level: 55, tag: "More than beginner", color: "#F7DF1E" },
-  { name: "React", icon: SiReact, level: 35, tag: "Beginner", color: "#61DAFB" },
-  { name: "Tailwind", icon: SiTailwindcss, level: 80, tag: "Learned", color: "#38BDF8" },
-  { name: "Java", icon: SiOpenjdk, level: 25, tag: "Just started", color: "#ED8B00" },
-  { name: "C", icon: SiC, level: 50, tag: "More than beginner", color: "#A8B9CC" },
-  { name: "Canva", icon: SiCanva, level: 78, tag: "Graphic design", color: "#00C4CC" },
+  { name: "React.js", icon: SiReact, level: 35, tag: "Beginner", color: "#61DAFB" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, level: 60, tag: "Learning", color: "#38BDF8" },
+  { name: "Java", icon: SiOpenjdk, level: 20, tag: "Just started", color: "#ED8B00" },
+  { name: "C Programming", icon: SiC, level: 40, tag: "More than beginner", color: "#A8B9CC" },
+  { name: "Canva", icon: SiCanva, level: 65, tag: "Graphic design", color: "#00C4CC" },
 ];
 
 export function Skills() {
