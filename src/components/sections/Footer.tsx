@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, MessageCircle, Facebook, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Facebook, Instagram, Mail, Phone, ArrowUpRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const socials = [
-  { Icon: Github, href: "#", label: "GitHub" },
-  { Icon: Linkedin, href: "#", label: "LinkedIn" },
-  { Icon: MessageCircle, href: "#", label: "Chat" },
-  { Icon: Facebook, href: "#", label: "Facebook" },
-  { Icon: Instagram, href: "#", label: "Instagram" },
-  { Icon: Mail, href: "mailto:hello@puskar.dev", label: "Email" },
+  { Icon: Github, href: "https://github.com/puskar29", label: "GitHub" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/in/puskar-thapa-magar-0a5b09365/", label: "LinkedIn" },
+  { Icon: FaWhatsapp, href: "https://wa.me/9779766479723", label: "WhatsApp" },
+  { Icon: Facebook, href: "https://www.facebook.com/puskar.magar.453520/", label: "Facebook" },
+  { Icon: Instagram, href: "https://www.instagram.com/puskar_magar02/", label: "Instagram" },
+  { Icon: Mail, href: "mailto:puskarmagar0215@gmail.com", label: "Email" },
+  { Icon: Phone, href: "tel:+9779766479723", label: "Phone" },
 ];
 
 export function Footer() {
