@@ -141,7 +141,7 @@ export function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-6 text-[11px] text-muted-foreground"
             >
-              hello@puskar.dev
+              puskarmagar0215@gmail.com · Kathmandu, Nepal
             </motion.p>
           </div>
         </div>
