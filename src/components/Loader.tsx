@@ -3,10 +3,22 @@ import { useEffect, useState } from "react";
 
 export function Loader() {
   const [done, setDone] = useState(false);
+  const [pct, setPct] = useState(0);
+
   useEffect(() => {
-    const t = setTimeout(() => setDone(true), 1500);
-    return () => clearTimeout(t);
+    const start = performance.now();
+    const dur = 1600;
+    let raf = 0;
+    const tick = (t: number) => {
+      const p = Math.min(1, (t - start) / dur);
+      setPct(Math.round(p * 100));
+      if (p < 1) raf = requestAnimationFrame(tick);
+      else setTimeout(() => setDone(true), 250);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
   }, []);
+
   return (
     <AnimatePresence>
       {!done && (
@@ -16,30 +28,30 @@ export function Loader() {
           transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
           className="fixed inset-0 z-[100] grid place-items-center bg-background"
         >
-          <div className="flex flex-col items-center gap-6">
-            <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              className="relative grid h-16 w-16 place-items-center rounded-full gradient-aurora"
+          <div className="absolute inset-0 noise opacity-60" />
+          <div className="relative flex flex-col items-center gap-8">
+            <motion.h1
+              initial={{ opacity: 0, letterSpacing: "0.4em" }}
+              animate={{ opacity: 1, letterSpacing: "0.6em" }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="font-display text-3xl font-semibold tracking-[0.6em] text-foreground md:text-5xl"
             >
-              <span className="absolute inset-0 animate-ping rounded-full gradient-aurora opacity-40" />
-              <span className="relative font-display text-sm font-bold text-background">PM</span>
-            </motion.div>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: 160 }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
-              className="h-[2px] gradient-aurora"
-            />
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="font-display text-xs uppercase tracking-[0.4em] text-muted-foreground"
-            >
-              Initializing
-            </motion.span>
+              PUSKAR
+            </motion.h1>
+
+            <div className="flex w-[240px] flex-col gap-3">
+              <div className="relative h-px w-full overflow-hidden bg-foreground/10">
+                <motion.div
+                  className="absolute inset-y-0 left-0 bg-foreground"
+                  style={{ width: `${pct}%` }}
+                  transition={{ ease: "linear" }}
+                />
+              </div>
+              <div className="flex items-center justify-between font-display text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
+                <span>Loading</span>
+                <span>{pct.toString().padStart(3, "0")}%</span>
+              </div>
+            </div>
           </div>
         </motion.div>
       )}

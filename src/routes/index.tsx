@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/lib/theme";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { CursorGlow } from "@/components/CursorGlow";
@@ -19,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Puskar Thapa Magar — BCA student and aspiring software developer crafting modern, cinematic web experiences with React, Java and motion design.",
+          "Portfolio of Puskar Thapa Magar — BCA student and software developer crafting cinematic, minimal interfaces with React, Java and motion.",
       },
       { property: "og:title", content: "Puskar Thapa Magar — Creative Developer" },
       { property: "og:description", content: "Cinematic, premium developer portfolio." },
@@ -52,6 +53,7 @@ function Index() {
         <Contact />
         <Footer />
       </main>
+      <Toaster theme="dark" position="bottom-right" />
     </ThemeProvider>
   );
 }
