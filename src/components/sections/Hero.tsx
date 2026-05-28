@@ -4,7 +4,7 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { Particles } from "@/components/Particles";
 
-const ROLES = ["Java Learner", "Frontend Developer", "Creative Problem Solver", "Future Software Engineer"];
+const ROLES = ["Java Enthusiast", "Frontend Developer", "Creative Problem Solver", "Future Software Engineer"];
 
 export function Hero() {
   const [i, setI] = useState(0);
