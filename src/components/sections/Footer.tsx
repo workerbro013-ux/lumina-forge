@@ -164,11 +164,6 @@ export function Footer() {
         {/* Bottom meta */}
         <div className="mt-5 flex flex-col items-center justify-between gap-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground md:flex-row">
           <span>© {new Date().getFullYear()} Puskar Thapa Magar</span>
-          <span className="flex items-center gap-2 text-center">
-            Crafted in Kathmandu
-            <span className="h-1 w-1 rounded-full bg-foreground/40" />
-            Built with React &amp; Motion
-          </span>
           <span className="flex items-center gap-2">
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
