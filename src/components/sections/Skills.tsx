@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import {
-  SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss, SiOpenjdk, SiC,
+  SiHtml5, SiCss, SiJavascript, SiReact, SiTailwindcss, SiOpenjdk, SiC,
 } from "react-icons/si";
 
 const skills = [
   { name: "HTML", icon: SiHtml5, level: 92, color: "#E34F26" },
-  { name: "CSS", icon: SiCss3, level: 88, color: "#1572B6" },
+  { name: "CSS", icon: SiCss, level: 88, color: "#1572B6" },
   { name: "JavaScript", icon: SiJavascript, level: 85, color: "#F7DF1E" },
   { name: "React", icon: SiReact, level: 80, color: "#61DAFB" },
   { name: "Tailwind", icon: SiTailwindcss, level: 90, color: "#38BDF8" },
