@@ -13,6 +13,7 @@ const links = [
 ];
 
 export function Navbar() {
+  const { theme, toggle } = useTheme();
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
