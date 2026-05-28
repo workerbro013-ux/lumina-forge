@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import {
-  SiHtml5, SiCss, SiJavascript, SiReact, SiTailwindcss, SiOpenjdk, SiC,
+  SiHtml5, SiCss, SiJavascript, SiReact, SiTailwindcss, SiOpenjdk, SiC, SiCanva,
 } from "react-icons/si";
 
 const skills = [
-  { name: "HTML", icon: SiHtml5, level: 92, color: "#E34F26" },
-  { name: "CSS", icon: SiCss, level: 88, color: "#1572B6" },
-  { name: "JavaScript", icon: SiJavascript, level: 85, color: "#F7DF1E" },
-  { name: "React", icon: SiReact, level: 80, color: "#61DAFB" },
-  { name: "Tailwind", icon: SiTailwindcss, level: 90, color: "#38BDF8" },
-  { name: "Java", icon: SiOpenjdk, level: 75, color: "#ED8B00" },
-  { name: "C", icon: SiC, level: 70, color: "#A8B9CC" },
+  { name: "HTML", icon: SiHtml5, level: 75, tag: "Intermediate", color: "#E34F26" },
+  { name: "CSS", icon: SiCss, level: 72, tag: "Intermediate", color: "#1572B6" },
+  { name: "JavaScript", icon: SiJavascript, level: 55, tag: "More than beginner", color: "#F7DF1E" },
+  { name: "React", icon: SiReact, level: 35, tag: "Beginner", color: "#61DAFB" },
+  { name: "Tailwind", icon: SiTailwindcss, level: 80, tag: "Learned", color: "#38BDF8" },
+  { name: "Java", icon: SiOpenjdk, level: 25, tag: "Just started", color: "#ED8B00" },
+  { name: "C", icon: SiC, level: 50, tag: "More than beginner", color: "#A8B9CC" },
+  { name: "Canva", icon: SiCanva, level: 78, tag: "Graphic design", color: "#00C4CC" },
 ];
 
 export function Skills() {
@@ -53,9 +54,11 @@ export function Skills() {
                   <Icon className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-baseline justify-between">
+                  <div className="flex items-baseline justify-between gap-2">
                     <h3 className="font-display text-lg font-semibold">{s.name}</h3>
-                    <span className="text-xs text-muted-foreground">{s.level}%</span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                      {s.tag}
+                    </span>
                   </div>
                   <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-secondary">
                     <motion.div
