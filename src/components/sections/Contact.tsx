@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Github, Mail, Send, Linkedin, Twitter, Loader2 } from "lucide-react";
+import { Github, Mail, Send, Linkedin, Instagram, Facebook, Phone, Loader2 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
