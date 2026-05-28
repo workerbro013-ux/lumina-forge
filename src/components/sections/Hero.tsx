@@ -17,29 +17,33 @@ export function Hero() {
 
   return (
     <section id="top" className="relative isolate flex min-h-screen items-center overflow-hidden pt-28">
-      {/* Background layers — cinematic depth */}
+      {/* Minimal cinematic background — theme aware */}
+      {/* Soft vignette using foreground/background tokens */}
       <div aria-hidden className="absolute inset-0 -z-20"
         style={{
           background:
-            "radial-gradient(1200px 700px at 15% 20%, oklch(0.20 0.04 220 / 0.55), transparent 60%), radial-gradient(900px 600px at 90% 80%, oklch(0.25 0.05 260 / 0.45), transparent 65%), radial-gradient(700px 500px at 50% 50%, oklch(0.18 0.02 230 / 0.4), transparent 70%)",
+            "radial-gradient(900px 600px at 50% 30%, color-mix(in oklab, var(--foreground) 5%, transparent), transparent 70%)",
         }}
       />
-      {/* Animated aurora orbs */}
-      <div className="absolute -left-40 top-1/4 -z-10 h-[520px] w-[520px] rounded-full opacity-30 blur-3xl animate-aurora"
-        style={{ background: "radial-gradient(circle, oklch(0.82 0.11 215), transparent 60%)" }} />
-      <div className="absolute -right-40 bottom-0 -z-10 h-[460px] w-[460px] rounded-full opacity-20 blur-3xl animate-aurora"
-        style={{ background: "radial-gradient(circle, oklch(0.55 0.06 280), transparent 60%)" }} />
-      {/* Conic shimmer ring */}
-      <div aria-hidden className="absolute left-1/2 top-1/2 -z-10 h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.12] blur-2xl"
-        style={{ background: "conic-gradient(from 90deg at 50% 50%, transparent 0deg, oklch(0.82 0.11 215) 60deg, transparent 140deg, oklch(0.7 0.08 280) 240deg, transparent 320deg)" }} />
-      {/* Top horizon line */}
+      {/* Faint dot field */}
+      <div aria-hidden className="absolute inset-0 -z-10 opacity-[0.35]"
+        style={{
+          backgroundImage:
+            "radial-gradient(color-mix(in oklab, var(--foreground) 18%, transparent) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+        }}
+      />
+      {/* Single subtle ambient orb */}
+      <div aria-hidden className="absolute left-1/2 top-1/3 -z-10 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30 blur-3xl animate-aurora"
+        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--ring) 35%, transparent), transparent 65%)" }} />
+      {/* Hairline horizons */}
       <div aria-hidden className="absolute inset-x-0 top-0 -z-10 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, oklch(0.82 0.11 215 / 0.4), transparent)" }} />
-      {/* Bottom horizon glow */}
-      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-40"
-        style={{ background: "linear-gradient(to top, oklch(0.10 0.005 240), transparent)" }} />
+        style={{ background: "linear-gradient(90deg, transparent, color-mix(in oklab, var(--foreground) 18%, transparent), transparent)" }} />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-32"
+        style={{ background: "linear-gradient(to top, var(--background), transparent)" }} />
       <div className="absolute inset-0 -z-10 noise" />
-      <Particles count={28} />
 
       <div className="relative mx-auto w-full max-w-6xl px-6">
         <motion.div
