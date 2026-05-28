@@ -20,10 +20,11 @@ export function Hero() {
       {/* Background layers */}
       <div className="absolute inset-0 -z-10 grid-bg" />
       <div className="absolute inset-0 -z-10 noise" />
-      <div className="absolute -left-40 top-1/4 -z-10 h-[520px] w-[520px] rounded-full gradient-aurora opacity-30 blur-3xl animate-aurora" />
-      <div className="absolute -right-40 bottom-0 -z-10 h-[520px] w-[520px] rounded-full opacity-25 blur-3xl animate-aurora"
-        style={{ background: "radial-gradient(circle, oklch(0.85 0.16 200), transparent 60%)" }} />
-      <Particles count={36} />
+      <div className="absolute -left-40 top-1/4 -z-10 h-[520px] w-[520px] rounded-full opacity-25 blur-3xl animate-aurora"
+        style={{ background: "radial-gradient(circle, oklch(0.82 0.11 215), transparent 60%)" }} />
+      <div className="absolute -right-40 bottom-0 -z-10 h-[420px] w-[420px] rounded-full opacity-15 blur-3xl animate-aurora"
+        style={{ background: "radial-gradient(circle, oklch(0.55 0.04 230), transparent 60%)" }} />
+      <Particles count={24} />
 
       <div className="relative mx-auto w-full max-w-6xl px-6">
         <motion.div
@@ -47,7 +48,7 @@ export function Hero() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, delay: 0.1 + wi * 0.12, ease: [0.22, 1, 0.36, 1] }}
                 className={"inline-block " + (wi === 1 ? "gradient-text animate-shimmer" : "")}
-                style={wi === 1 ? { backgroundImage: "linear-gradient(120deg, oklch(0.85 0.16 200), oklch(0.65 0.27 295), oklch(0.82 0.12 350), oklch(0.85 0.16 200))" } : undefined}
+                style={wi === 1 ? { backgroundImage: "linear-gradient(120deg, oklch(0.98 0.002 240), oklch(0.82 0.11 215), oklch(0.65 0.06 230), oklch(0.98 0.002 240))" } : undefined}
               >
                 {word}
               </motion.span>
