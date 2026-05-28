@@ -80,23 +80,37 @@ export function Contact() {
 
             <div className="mt-10 space-y-3">
               <a
-                href="mailto:hello@puskar.dev"
+                href="mailto:puskarmagar0215@gmail.com"
                 className="group flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground"
               >
                 <span className="grid h-9 w-9 place-items-center rounded-full border border-border/60 transition-colors group-hover:bg-secondary">
                   <Mail className="h-4 w-4" />
                 </span>
-                hello@puskar.dev
+                puskarmagar0215@gmail.com
               </a>
+              <a
+                href="tel:+9779766479723"
+                className="group flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground"
+              >
+                <span className="grid h-9 w-9 place-items-center rounded-full border border-border/60 transition-colors group-hover:bg-secondary">
+                  <Phone className="h-4 w-4" />
+                </span>
+                +977 9766479723
+              </a>
+              <p className="text-xs text-muted-foreground">Kathmandu, Nepal</p>
               <div className="flex items-center gap-2 pt-4">
                 {[
-                  { Icon: Github, href: "#" },
-                  { Icon: Linkedin, href: "#" },
-                  { Icon: Twitter, href: "#" },
+                  { Icon: Github, href: "https://github.com/puskar29" },
+                  { Icon: Linkedin, href: "https://www.linkedin.com/in/puskar-thapa-magar-0a5b09365/" },
+                  { Icon: FaWhatsapp, href: "https://wa.me/9779766479723" },
+                  { Icon: Facebook, href: "https://www.facebook.com/puskar.magar.453520/" },
+                  { Icon: Instagram, href: "https://www.instagram.com/puskar_magar02/" },
                 ].map(({ Icon, href }, i) => (
                   <a
                     key={i}
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="grid h-10 w-10 place-items-center rounded-full border border-border/60 text-muted-foreground transition-all hover:scale-110 hover:border-foreground/40 hover:text-foreground"
                   >
                     <Icon className="h-4 w-4" />
