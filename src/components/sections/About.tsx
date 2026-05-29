@@ -116,7 +116,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="space-y-4 md:col-span-8 md:col-start-5"
+          className="space-y-3 md:col-span-8 md:col-start-5 md:mt-2"
         >
           <p className="font-display text-sm uppercase tracking-[0.35em] text-foreground/80">
             Projects &gt; Promises
