@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import portrait from "@/assets/puskar-portrait.png";
 
 const stats = [
   { k: "4th", v: "BCA Semester" },
@@ -20,13 +21,78 @@ export function About() {
         — About
       </motion.p>
 
-      <div className="grid gap-12 md:grid-cols-12">
+      <div className="grid gap-12 md:grid-cols-12 md:items-start">
+        {/* Portrait */}
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.96 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="relative md:col-span-4"
+        >
+          <div className="group relative">
+            {/* Ambient glow */}
+            <div
+              aria-hidden
+              className="absolute -inset-6 -z-10 rounded-[2rem] opacity-60 blur-3xl transition-opacity duration-700 group-hover:opacity-90"
+              style={{
+                background:
+                  "radial-gradient(circle at 30% 20%, color-mix(in oklab, var(--ring) 55%, transparent), transparent 65%)",
+              }}
+            />
+            {/* Frame */}
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-border/60 bg-secondary/40">
+              <motion.img
+                src={portrait}
+                alt="Puskar Thapa Magar portrait"
+                loading="lazy"
+                whileHover={{ scale: 1.04 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                className="aspect-square w-full object-cover"
+              />
+              {/* Gradient veil */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(180deg, transparent 55%, color-mix(in oklab, var(--background) 75%, transparent))",
+                }}
+              />
+              {/* Grain */}
+              <div aria-hidden className="pointer-events-none absolute inset-0 noise opacity-40" />
+              {/* Corner label */}
+              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                <div>
+                  <div className="font-display text-xs uppercase tracking-[0.35em] text-foreground/80">
+                    Puskar
+                  </div>
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                    Kathmandu · Nepal
+                  </div>
+                </div>
+                <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_2px_rgba(52,211,153,0.7)]" />
+              </div>
+            </div>
+            {/* Floating tag */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="absolute -bottom-4 -right-4 rounded-full glass px-3 py-1.5 text-[10px] uppercase tracking-[0.3em] text-foreground/80"
+            >
+              BCA · 4th Sem
+            </motion.div>
+          </div>
+        </motion.div>
+
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-display text-3xl font-semibold leading-tight tracking-tight md:col-span-7 md:text-5xl"
+          className="font-display text-3xl font-semibold leading-tight tracking-tight md:col-span-8 md:text-4xl lg:text-5xl"
         >
           A <span className="gradient-text">TU BCA</span> student who turns curiosity into
           working projects. Learning Java, exploring frontend, and building real things —
@@ -38,7 +104,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="space-y-4 md:col-span-5"
+          className="space-y-4 md:col-span-8 md:col-start-5"
         >
           <p className="font-display text-sm uppercase tracking-[0.35em] text-foreground/80">
             Projects &gt; Promises
