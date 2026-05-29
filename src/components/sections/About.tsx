@@ -10,18 +10,18 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="relative mx-auto max-w-6xl px-6 py-32">
+    <section id="about" className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-6 font-display text-[10px] uppercase tracking-[0.5em] text-muted-foreground"
+        className="mb-3 font-display text-[10px] uppercase tracking-[0.5em] text-muted-foreground"
       >
         — About
       </motion.p>
 
-      <div className="grid gap-12 md:grid-cols-12 md:items-start">
+      <div className="grid gap-6 md:grid-cols-12 md:items-start md:gap-12">
         {/* Portrait */}
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.96 }}
@@ -116,7 +116,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="space-y-4 md:col-span-8 md:col-start-5"
+          className="space-y-3 md:col-span-8 md:col-start-5 md:mt-2"
         >
           <p className="font-display text-sm uppercase tracking-[0.35em] text-foreground/80">
             Projects &gt; Promises
@@ -137,7 +137,7 @@ export function About() {
         </motion.div>
       </div>
 
-      <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border/60 bg-border/40 md:grid-cols-4">
+      <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border/60 bg-border/40 md:mt-16 md:grid-cols-4">
         {stats.map((s, i) => (
           <motion.div
             key={s.v}
