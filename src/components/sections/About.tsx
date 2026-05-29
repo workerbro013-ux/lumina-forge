@@ -87,17 +87,29 @@ export function About() {
           </div>
         </motion.div>
 
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-display text-3xl font-semibold leading-tight tracking-tight md:col-span-8 md:text-4xl lg:text-5xl"
+          className="md:col-span-8"
         >
-          A <span className="gradient-text">TU BCA</span> student who turns curiosity into
-          working projects. Learning Java, exploring frontend, and building real things —
-          not waiting for permission.
-        </motion.h2>
+          <p className="mb-5 inline-flex items-center gap-3 font-display text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
+            <span className="h-px w-8 bg-foreground/30" />
+            Hello, I'm Puskar
+          </p>
+          <h2 className="font-display text-[2rem] font-light leading-[1.08] tracking-tight md:text-[2.6rem] lg:text-[3.1rem]">
+            A <em className="font-serif italic font-normal gradient-text">TU BCA</em> student
+            <br className="hidden md:block" /> who turns{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">curiosity</span>
+              <span aria-hidden className="absolute inset-x-0 bottom-1 -z-0 h-[0.35em] bg-foreground/10" />
+            </span>{" "}
+            into working things —
+            <br className="hidden md:block" /> not waiting for{" "}
+            <em className="font-serif italic font-normal text-foreground/70">permission</em>.
+          </h2>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
