@@ -137,7 +137,7 @@ export function About() {
         </motion.div>
       </div>
 
-      <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border/60 bg-border/40 md:grid-cols-4">
+      <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border/60 bg-border/40 md:mt-16 md:grid-cols-4">
         {stats.map((s, i) => (
           <motion.div
             key={s.v}
