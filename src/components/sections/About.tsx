@@ -10,18 +10,18 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="relative mx-auto max-w-6xl px-6 py-32">
+    <section id="about" className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-6 font-display text-[10px] uppercase tracking-[0.5em] text-muted-foreground"
+        className="mb-3 font-display text-[10px] uppercase tracking-[0.5em] text-muted-foreground"
       >
         — About
       </motion.p>
 
-      <div className="grid gap-12 md:grid-cols-12 md:items-start">
+      <div className="grid gap-6 md:grid-cols-12 md:items-start md:gap-12">
         {/* Portrait */}
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.96 }}
