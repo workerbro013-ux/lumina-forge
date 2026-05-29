@@ -48,7 +48,7 @@ export function About() {
                 loading="lazy"
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="aspect-square w-full object-cover"
+                className="aspect-[4/5] w-full object-cover md:aspect-[3/4]"
               />
               {/* Gradient veil */}
               <div
